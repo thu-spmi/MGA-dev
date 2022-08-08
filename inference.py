@@ -208,7 +208,7 @@ def get_resp(resp_tensor):
         resp_batch=resp_tensor
     resp_gen=[]
     eos_r_id=reader.eos_r_id
-    sos_r_id=reader.sos_a_id
+    sos_r_id=reader.sos_r_id
     for i,resp in enumerate(resp_batch):
         if eos_r_id in resp:
             resp=[sos_r_id]+resp[:resp.index(eos_r_id)+1]
